@@ -17,4 +17,16 @@ public class MathServiceTest {
     public void non_leap_year_should_not_be_divisible_by_four(){
         assertFalse(MathService.isLeapYear(3));
     }
+
+    @Test
+    public void years_divisible_by_100_are_not_leap_years() {
+        assertFalse(MathService.isLeapYear(1900));
+    }
+
+    @Test
+    public void years_divisible_by_400_are_leap_years() {
+        assertTrue(MathService.isLeapYear(2000));
+    }
+
+
 }
